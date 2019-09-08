@@ -1,0 +1,14 @@
+{
+  "name": "stickies",
+  "version": "1.0.0",
+  "description": "Simple sticky note application for your desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Jack Campanella",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^6.0.7"
+  }
+}

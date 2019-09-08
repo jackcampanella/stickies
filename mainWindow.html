@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stickies</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body class="yellow lighten-2" >
+    <!-- Text area for the note-->
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea" style="font-size: 24pt"></textarea>
+                    <label for="textarea1">Jot down some stuff here!</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Functional buttons-->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">more_horiz</i>
+        </a>
+        <ul>
+            <li><a id="delete-btn" class="btn-floating red" ><i class="material-icons">delete</i></a></li>
+            <li><a class="btn-floating red"><i class="material-icons">mode_edit</i></a></li>
+            <li><a class="btn-floating red"><i class="material-icons">save_alt</i></a></li>
+            <li><a id="add-btn" class="btn-floating red"><i class="material-icons">add</i></a></li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        
+        // Hover over main button to show other buttons
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                direction: 'left'
+            });
+        });
+
+        // Handles delete button functionality - clears contents of text area
+        document.getElementById("delete-btn").addEventListener("click", function(){
+            document.getElementById("textarea1").value="";
+            
+        });
+
+        // Handles add button functionality, note the empty parameter in the open() function
+        document.getElementById("add-btn").addEventListener("click", function(){
+            window.open('addWindow.html', '', 'width=400, height=400');
+            
+        });
+
+        //Handles the save button functionality
+
+        
+    </script>
+
+
+</body>
+
+</html>
