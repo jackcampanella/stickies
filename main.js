@@ -6,6 +6,9 @@ const path = require('path');
 // Bringing in various objects from electron's library
 const {app, BrowserWindow, Menu} = electron;
 
+// Set environment, remove if you wish to persist in development mode
+process.env.NODE_ENV = 'production';
+
 // Variables to represent our initial sticky note and additional notes
 let mainWindow;
 let addWindow;
